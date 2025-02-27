@@ -1,7 +1,7 @@
 // routes/Home.js
 import React from 'react';
 import styled from 'styled-components';
-import HomeContent from '../components/Main/Main';  // Componente da home (conteúdo)
+import Main from '../components/Main/Main';  // Componente da home (conteúdo)
 import Sidebar from '../components/Sidebar/Sidebar';
 import Header from '../components/Header/Header';
 import Player from '../components/Player/Player';
@@ -17,12 +17,14 @@ const AppContainer = styled.div`
 
 const Div = styled.div`
   width: 100%;
-  height: 100%;
+  height: calc(100% - 190px);  /* Subtraindo a altura do player */
   display: flex;
   gap: 20px;
   padding: 20px;
   background-color: #000000;
+  padding-bottom: 100px;  /* Espaço suficiente para o player */
 `;
+
 
 function Home() {
   return (
@@ -30,7 +32,7 @@ function Home() {
       <Header />
       <Div>
         <Sidebar />
-        <HomeContent />
+        <Main />
       </Div>
       <Player />
     </AppContainer>
