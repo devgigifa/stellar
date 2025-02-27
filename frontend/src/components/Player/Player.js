@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaVolumeUp, FaExpandAlt, FaPlay, FaPause, FaStepBackward, FaStepForward } from 'react-icons/fa'; // Ícones de player
+import { FaExpandAlt, FaPlay, FaPause, FaStepBackward, FaStepForward } from 'react-icons/fa'; // Ícones de player
+import { CiVolumeHigh } from "react-icons/ci";
 
 // Estilo do contêiner do player fixado na parte inferior
 const PlayerContainer = styled.div`
@@ -108,10 +109,9 @@ const RightControls = styled.div`
   margin-right: 35px;
 `;
 
-const VolumeIcon = styled(FaVolumeUp)`
+const VolumeIcon = styled(CiVolumeHigh)`
   color: white;
   font-size: 18px;
-  cursor: pointer;
 `;
 
 const VolumeBar = styled.input`
@@ -130,7 +130,7 @@ const VolumeBar = styled.input`
 
 const FullscreenButton = styled(FaExpandAlt)`
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 `;
 
