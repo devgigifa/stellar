@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LuLibrary } from "react-icons/lu";
 
 const SidebarContainer = styled.div`
   flex: 0.5;
@@ -14,6 +15,9 @@ const SidebarTitle = styled.h2`
   margin-bottom: 20px;
   color: #b3b3b3;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 const SidebarList = styled.ul`
@@ -58,7 +62,9 @@ const SidebarText = styled.div`
 function Sidebar() {
   return (
     <SidebarContainer>
-      <SidebarTitle>Sua Biblioteca</SidebarTitle>
+      <SidebarTitle>
+      <LuLibrary /> Sua Biblioteca
+      </SidebarTitle>      
       <SidebarList>
         <SidebarItem>
           <SidebarImage src="https://cdn.venngage.com/template/thumbnail/small/bf008bfe-9bf6-4511-b795-e86f070bfff5.webp" alt="Playlist"/>
