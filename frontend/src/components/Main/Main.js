@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaPlay, FaPause } from 'react-icons/fa';
 
-const HomeContainer = styled.div`
+const Main = styled.div`
   flex: 1;
   overflow-y: auto;
   padding: 20px;
@@ -89,7 +89,7 @@ const Home = () => {
   };
 
   return (
-    <HomeContainer>
+    <Main>
       <H1>Feito para Você</H1>
       <Grid>
         {Array.from({ length: 6 }).map((_, index) => (
@@ -122,7 +122,7 @@ const Home = () => {
           </CardWithButton>
         ))}
       </Grid>
-    </HomeContainer>
+    </Main>
   );
 };
 
