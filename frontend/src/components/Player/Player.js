@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaExpandAlt, FaPlay, FaPause, FaStepBackward, FaStepForward } from 'react-icons/fa'; // Ícones de player
-import { CiVolumeHigh } from "react-icons/ci";
 
-// Estilo do contêiner do player fixado na parte inferior
 const PlayerContainer = styled.div`
   position: fixed;
   bottom: 0;
@@ -18,7 +16,6 @@ const PlayerContainer = styled.div`
   z-index: 1000;
 `;
 
-// Estilo da parte esquerda do player (imagem e detalhes da música)
 const TrackInfo = styled.div`
   display: flex;
   align-items: center;
@@ -49,7 +46,6 @@ const TrackArtist = styled.p`
   margin: 0;
 `;
 
-// Estilo da parte central do player (controle de reprodução e barra de progresso)
 const PlayerControls = styled.div`
   display: flex;
   align-items: center;
@@ -109,25 +105,6 @@ const RightControls = styled.div`
   margin-right: 35px;
 `;
 
-const VolumeIcon = styled(CiVolumeHigh)`
-  color: white;
-  font-size: 18px;
-`;
-
-const VolumeBar = styled.input`
-  width: 100px;
-  height: 5px;
-  background-color: #444;
-  border-radius: 5px;
-  cursor: pointer;
-
-  &::-webkit-slider-runnable-track {
-    height: 5px;
-    background-color: #444;
-    border-radius: 5px;
-  }
-`;
-
 const FullscreenButton = styled(FaExpandAlt)`
   color: white;
   font-size: 15px;
@@ -144,7 +121,6 @@ function Player() {
 
   return (
     <PlayerContainer>
-      {/* Parte esquerda: Imagem da música e detalhes */}
       <TrackInfo>
         <TrackImage src="https://cdn.venngage.com/template/thumbnail/small/bf008bfe-9bf6-4511-b795-e86f070bfff5.webp" alt="Capa do álbum" />
         <TrackDetails>
@@ -171,8 +147,6 @@ function Player() {
       </PlayerControls>
 
       <RightControls>
-          <VolumeIcon />
-          <VolumeBar type="range" value="70" min="0" max="100" />
         <FullscreenButton />
       </RightControls>
     </PlayerContainer>
