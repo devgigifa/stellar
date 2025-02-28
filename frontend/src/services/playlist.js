@@ -1,23 +1,23 @@
 // import axios from "axios";
 
-// const favoritesAPI = axios.create({ baseURL: "http://localhost:8000/favorites" });
+// const playlistAPI = axios.create({ baseURL: "http://localhost:8000/playlist" });
 
-// async function getFavorites() {
-//     const response = await favoritesAPI.get('/');
+// async function getPlaylist() {
+//     const response = await playlistAPI.get('/');
 
 //     return response.data;
 // }
 
-// async function postFavorite(id) {
-//     await favoritesAPI.post(`/${id}`);
+// async function postPlaylist(id) {
+//     await playlistAPI.post(`/${id}`);
 // }
 
-// async function deleteFavorite(id) {
-//     await favoritesAPI.delete(`/${id}`);
+// async function deletePlaylist(id) {
+//     await playlistAPI.delete(`/${id}`);
 // }
 
 // export {
-//     getFavorites,
-//     postFavorite,
-//     deleteFavorite
+//     getPlaylist,
+//     postPlaylist,
+//     deletePlaylist
 // };
