@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importando o Link para navegação
+import { FaHome } from 'react-icons/fa'; // Importando o ícone de casinha do React Icons
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
@@ -17,7 +19,7 @@ const HeaderContainer = styled.header`
 const Logo = styled.div`
   font-size: 40px;
   font-weight: bold;
-  color:rgb(151, 86, 255);
+  color: rgb(151, 86, 255);
 `;
 
 const SearchBox = styled.form`
@@ -53,19 +55,46 @@ const UserProfile = styled.div`
   }
 `;
 
+const HomeButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(95, 95, 95);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background-color:rgb(105, 105, 105); /* Cor de fundo ao passar o mouse */
+    color: #fff
+  }
+`;
+
 function Header() {
   return (
     <HeaderContainer>
       <Logo>Stellar Music</Logo>
+
       <SearchBox>
-        <SearchInput type="text" placeholder=" "/>
+        <SearchInput type="text" placeholder=" " />
       </SearchBox>
-      <UserProfile>
-        <img
-          src="https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"
-          alt="User"
-        />
-      </UserProfile>
+
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {/* Botão de navegação para a página inicial */}
+        <HomeButton to="/">
+          <FaHome /> {/* Ícone de casa */}
+        </HomeButton>
+
+        <UserProfile>
+          <img
+            src="https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"
+            alt="User"
+          />
+        </UserProfile>
+      </div>
     </HeaderContainer>
   );
 }
